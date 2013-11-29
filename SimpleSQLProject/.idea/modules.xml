@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SimpleSQL/SimpleSQL.iml" filepath="$PROJECT_DIR$/SimpleSQL/SimpleSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSQLProject.iml" filepath="$PROJECT_DIR$/SimpleSQLProject.iml" />
+    </modules>
+  </component>
+</project>
+
