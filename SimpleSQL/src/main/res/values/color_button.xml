@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="GreenStartColor">#16D302</color>
+    <color name="GreenEndColor">#348017</color>
+    <color name="GreenDisabledStartColor">#565051</color>
+    <color name="GreenDisabledEndColor">#736F6E</color>
+    <color name="GreenBorderColor">#254117</color>
+    <color name="RedStartColor">#FF4444</color>
+    <color name="RedEndColor">#CC0000</color>
+    <color name="RedDisabledStartColor">#565051</color>
+    <color name="RedDisabledEndColor">#736F6E</color>
+    <color name="RedBorderColor">#CC0000</color>
+</resources>
