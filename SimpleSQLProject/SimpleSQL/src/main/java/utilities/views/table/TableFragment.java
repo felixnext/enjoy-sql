@@ -32,13 +32,13 @@ public class TableFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.table_fragment,container, false);
         TableLayout head = (TableLayout) view.findViewById(R.id.Header);
-        TableLayout tb = (TableLayout) view.findViewById(R.id.Header);
+        TableLayout tb = (TableLayout) view.findViewById(R.id.TableData);
 
         //Data for table filling
         TableData data = new TableData();
 
         //add head to table
-        head.addView(createHeader(data.getTableHead(), R.drawable.table_top_orange));
+        head.addView(createHeader(data.getTableHead(), R.drawable.table_top_orange, true));
         //add data to table
         for(int i = 0; i< data.getTableData().length; i++) {
             int type = i%2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;
@@ -80,7 +80,7 @@ public class TableFragment extends Fragment {
         return row;
     }
 
-    protected TableRow createHeader(String[] tableHead,int typeOfCell){
+    protected TableRow createHeader(String[] tableHead,int typeOfCell, boolean head){
         TableRow row = new TableRow(getActivity());
 
         TableRow.LayoutParams tlparams = new TableRow.LayoutParams(
