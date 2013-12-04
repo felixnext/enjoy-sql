@@ -19,6 +19,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 import utilities.views.MultiWordAutoCompleteView;
 
 /**
@@ -41,7 +45,7 @@ public class JoinView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	//process: load the interface
     	super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_view);
+        setContentView(R.layout.table_join_view);
 
         //TODO: might show loading interface here?
 
@@ -71,16 +75,16 @@ public class JoinView extends Activity {
      */
     private void changeTablePos(int id, int new_id) {
     	//safty: check if the values are in bounds (otherwise)
-    	if (id < 0 || id >= joinTables.Size())
+    	if (id < 0 || id >= joinTables.size())
     		return;
     	if (new_id < 0)
     		new_id = 0;
-    	if (new_id >= joinTables.Size())
-    		new_id = joinTables.Size() - 1;
+    	if (new_id >= joinTables.size())
+    		new_id = joinTables.size() - 1;
 
     	//process: change data
     	String tmp = (String)joinTables.get(id);
-    	for (int i = id+1; i<joinTables.Size(); i++) {
+    	for (int i = id+1; i<joinTables.size(); i++) {
     		joinTables.set(i-1, (String)joinTables.get(i));
     	}
     	joinTables.add(tmp);
@@ -92,7 +96,7 @@ public class JoinView extends Activity {
      */
     private void removeTable(int id) {
     	//safty: check if id is in bounds
-		if (id < 0 || id >= joinTables.Size())
+		if (id < 0 || id >= joinTables.size())
     		return;
 
     	//process: remove the data

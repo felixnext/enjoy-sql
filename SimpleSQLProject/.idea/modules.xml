@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SimpleSQL/src/main/main.iml" filepath="$PROJECT_DIR$/SimpleSQL/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSQL/SimpleSQL.iml" filepath="$PROJECT_DIR$/SimpleSQL/SimpleSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSQLProject.iml" filepath="$PROJECT_DIR$/SimpleSQLProject.iml" />
     </modules>
   </component>
 </project>

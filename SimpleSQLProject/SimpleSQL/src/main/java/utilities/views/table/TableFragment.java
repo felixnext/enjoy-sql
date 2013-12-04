@@ -5,11 +5,15 @@ import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ImageSpan;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -29,10 +33,12 @@ public class TableFragment extends Fragment {
         View view = inflater.inflate(R.layout.table_fragment,container, false);
         TableLayout head = (TableLayout) view.findViewById(R.id.Header);
         TableLayout tb = (TableLayout) view.findViewById(R.id.Header);
+
+        //Data for table filling
         TableData data = new TableData();
 
         //add head to table
-        head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
+        head.addView(createHeader(data.getTableHead(), R.drawable.table_top_orange));
         //add data to table
         for(int i = 0; i< data.getTableData().length; i++) {
             int type = i%2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;
@@ -70,6 +76,36 @@ public class TableFragment extends Fragment {
             tv.setOnClickListener(new CellClickListener());
             row.addView(tv);
         }
+
+        return row;
+    }
+
+    protected TableRow createHeader(String[] tableHead,int typeOfCell){
+        TableRow row = new TableRow(getActivity());
+
+        TableRow.LayoutParams tlparams = new TableRow.LayoutParams(
+                TableRow.LayoutParams.WRAP_CONTENT,
+                TableRow.LayoutParams.WRAP_CONTENT);
+        row.setLayoutParams(tlparams);
+
+        for(String content: tableHead) {
+            Button button = new Button(getActivity());
+            button.setBackground(getResources().getDrawable(typeOfCell));
+            Spannable buttonLabel = new SpannableString(content + " ");
+            buttonLabel.setSpan(new ImageSpan(getActivity(), R.drawable.ic_action_expand,
+                    ImageSpan.ALIGN_BOTTOM), buttonLabel.length()-1, buttonLabel.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            button.setText(buttonLabel);
+            row.addView(button);
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //TODO where constraints 
+                }
+            });
+        }
+
+
 
         return row;
     }
