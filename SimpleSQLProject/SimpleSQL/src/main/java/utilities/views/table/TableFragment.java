@@ -27,11 +27,12 @@ public class TableFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.table_fragment,container, false);
-        TableLayout tb = (TableLayout) view.findViewById(R.id.DataTable);
+        TableLayout head = (TableLayout) view.findViewById(R.id.Header);
+        TableLayout tb = (TableLayout) view.findViewById(R.id.Header);
         TableData data = new TableData();
 
         //add head to table
-        tb.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
+        head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
         //add data to table
         for(int i = 0; i< data.getTableData().length; i++) {
             int type = i%2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;

@@ -13,8 +13,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -51,10 +55,10 @@ public class StoryView extends Activity {
         tv.setCompoundDrawables(null,null,img,null);
         */
 
-        ScrollView childScroll = (ScrollView) findViewById(R.id.scrollViewTable);
+        HorizontalScrollView childScroll = (HorizontalScrollView) findViewById(R.id.scrollViewTable);
         childScroll.getLayoutParams().height = ((int) (ScHgt(this) * SCROLL_VIEW_SIZE));
 
-        ScrollView parentScroll = (ScrollView) findViewById(R.id.mainScrollView);
+
 
         /*
         parentScroll.setOnTouchListener(new View.OnTouchListener() {
@@ -75,6 +79,29 @@ public class StoryView extends Activity {
                 return false;
             }
         });*/
+
+
+        ImageButton topArrow = (ImageButton)findViewById(R.id.ConvertTop);
+        topArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation rotate = AnimationUtils.loadAnimation(view.getContext(), R.anim.rotate_centre_clockwise);
+                view.startAnimation(rotate);
+                ImageButton downArrow = (ImageButton)findViewById(R.id.ConvertDown);
+                downArrow.startAnimation(rotate);
+            }
+        });
+
+        ImageButton downArrow = (ImageButton)findViewById(R.id.ConvertDown);
+        downArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation rotate = AnimationUtils.loadAnimation(view.getContext(), R.anim.rotate_centre);
+                view.startAnimation(rotate);
+                ImageButton topArrow = (ImageButton)findViewById(R.id.ConvertTop);
+                topArrow.startAnimation(rotate);
+            }
+        });
     }
 
     public static double ScHgt(Context context) {

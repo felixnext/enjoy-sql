@@ -28,30 +28,18 @@ class TableScrolelView extends android.widget.ScrollView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        RelativeLayout rel = (RelativeLayout)this.getChildAt(0);
-        ScrollView scroll = (ScrollView) rel.getChildAt(1);
-        Log.v("TAG", "TOUCH");
-        if(scroll.isInTouchMode()) {
-            requestDisallowInterceptTouchEvent(true);}
 
-        Log.v("CHILD", scroll.isFocused()+"");
-        Log.v("FOCUSED CHILD", getFocusedChild().toString());
-        // requestDisallowInterceptTouchEvent(true);
         return super.onTouchEvent(event);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        RelativeLayout rel = (RelativeLayout)this.getChildAt(0);
-        ScrollView scroll = (ScrollView) rel.getChildAt(1);
 
-       // if(scroll.isInTouchMode()) {
-         //   requestDisallowInterceptTouchEvent(true);}
+        // if(scroll.isInTouchMode()) {
+        requestDisallowInterceptTouchEvent(true);
+        //}
 
-        Log.v("TAG", "INTERCEPT TOUCH");
 
-        Log.v("CHILD", scroll.isFocused()+"");
-        Log.v("FOCUSED CHILD", getFocusedChild().toString());
         return super.onInterceptTouchEvent(ev);
     }
 }

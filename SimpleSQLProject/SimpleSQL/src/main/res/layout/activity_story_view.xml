@@ -3,7 +3,6 @@
     android:layout_height="fill_parent"
     android:id="@+id/mainScrollView"
     android:background="#000000"
-    android:focusableInTouchMode="false"
     >
 
 
@@ -29,27 +28,22 @@
             android:background="@drawable/speech_bubble_green"
             android:gravity="left"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:textSize="18sp"
-            android:id="@+id/textView" />
-
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingLeft="1dp"
-            android:paddingRight="1dp"
-            android:layout_marginTop="10dip"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/textView"
-            android:id="@+id/scrollViewTable"
-            android:fillViewport="true">
+            android:textSize="18sp"
+            android:id="@+id/textView" />
 
             <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:fillViewport="true">
+                android:scrollbarStyle="outsideInset"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:layout_marginTop="10dip"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/textView"
+                android:id="@+id/scrollViewTable">
 
                 <fragment
                     android:id="@+id/table_fragment"
@@ -58,18 +52,65 @@
                     android:name="utilities.views.table.TableFragment"
                     tools:layout="@layout/table_fragment" />
             </HorizontalScrollView>
-        </ScrollView>
+
+
+        <TableLayout
+            android:id="@+id/table_actions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrollViewTable"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TableRow
+                android:id="@+id/ButtonRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center">
+
+                <ImageButton  android:id="@+id/ConvertTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="10dp"
+                    android:maxWidth="10dp"
+                    android:background="@null"
+                    android:src="@drawable/top"/>
+
+                <ImageButton  android:id="@+id/TableJoinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="10dp"
+                    android:maxWidth="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_action_select_all"/>
+
+                <ImageButton  android:id="@+id/ConvertDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="10dp"
+                    android:maxWidth="10dp"
+                    android:background="@null"
+                    android:src="@drawable/down"/>
+
+            </TableRow>
+         </TableLayout>
 
         <utilities.views.MultiWordAutoCompleteView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/query_field"
-            android:layout_below="@+id/scrollViewTable"
+            android:layout_below="@+id/table_actions"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:padding="2dp"
-            android:hint="Put SQL query here!"
+            android:hint="Put SQL query here!\n\n\n"
             android:textColor="#FFFFFF"
             android:singleLine="false"
             android:gravity="top|left"
@@ -89,8 +130,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="30dp">
 
                 <Button
