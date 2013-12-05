@@ -12,10 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93da856-fe5a-4eb9-8d6b-71ddb1acc873" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_cell_touched.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_cell_touched.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_cell_white.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_cell_white.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_top_orange.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_top_orange.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_top_ye.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_top_ye.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SimpleSQLProject.iws" />
@@ -80,19 +76,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StoryView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StoryView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="41" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1350">
-              <folding />
+            <state line="127" column="36" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.64972526" vertical-offset="982" max-vertical-offset="1725">
+              <folding>
+                <element signature="e#4105#4261#0" expanded="true" />
+                <element signature="e#4250#4251#0" expanded="true" />
+                <element signature="e#4371#4523#0" expanded="true" />
+                <element signature="e#4512#4513#0" expanded="true" />
+                <element signature="e#4642#4795#0" expanded="true" />
+                <element signature="e#4784#4785#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_fragment.xml">
+      <file leaf-file-name="activity_story_view.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/activity_story_view.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="45" selection-start="987" selection-end="987" vertical-scroll-proportion="-12.777778" vertical-offset="30" max-vertical-offset="600">
+            <state line="154" column="50" selection-start="6468" selection-end="6468" vertical-scroll-proportion="-19.296297" vertical-offset="1789" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
@@ -101,13 +104,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="table_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_fragment.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="45" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="31" selection-start="2561" selection-end="2561" vertical-scroll-proportion="-0.375" vertical-offset="1260" max-vertical-offset="1740">
+            <state line="72" column="31" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1740">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2689#2741#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -787,8 +801,6 @@
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableScrollView.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/anim/rotate_centre_clockwise.xml" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/anim/rotate_centre.xml" />
-        <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/activity_story_view.xml" />
-        <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/values/table_bounds_color.xml" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_cell_touched.xml" />
@@ -797,6 +809,8 @@
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/table_top_orange.xml" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_fragment.xml" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java" />
+        <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/activity_story_view.xml" />
+        <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java" />
       </list>
     </option>
   </component>
@@ -1051,8 +1065,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1417,6 +1429,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1492,6 +1506,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1517,19 +1544,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1675,7 +1689,6 @@
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="100" y="122" width="1240" height="674" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1689,15 +1702,16 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24246772" sideWeight="0.501006" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32804233" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24246772" sideWeight="0.49899396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24246772" sideWeight="0.49899396" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3399471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="100" y="122" width="1240" height="674" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1945,21 +1959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="50" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.20604396" vertical-offset="585" max-vertical-offset="1770">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/activity_story_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="658" selection-end="658" vertical-scroll-proportion="67.703705" vertical-offset="2068" max-vertical-offset="2535">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+        <state line="49" column="50" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.20604396" vertical-offset="585" max-vertical-offset="1770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/drawable/green_button.xml">
@@ -2039,16 +2039,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="41" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="45" selection-start="987" selection-end="987" vertical-scroll-proportion="-12.777778" vertical-offset="30" max-vertical-offset="600">
+        <state line="25" column="45" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
@@ -2058,10 +2051,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="31" selection-start="2561" selection-end="2561" vertical-scroll-proportion="-0.375" vertical-offset="1260" max-vertical-offset="1740">
+        <state line="72" column="31" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1740">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2689#2741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/activity_story_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="50" selection-start="6468" selection-end="6468" vertical-scroll-proportion="-19.296297" vertical-offset="1789" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="36" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.64972526" vertical-offset="982" max-vertical-offset="1725">
+          <folding>
+            <element signature="e#4105#4261#0" expanded="true" />
+            <element signature="e#4250#4251#0" expanded="true" />
+            <element signature="e#4371#4523#0" expanded="true" />
+            <element signature="e#4512#4513#0" expanded="true" />
+            <element signature="e#4642#4795#0" expanded="true" />
+            <element signature="e#4784#4785#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
@@ -100,6 +101,31 @@ public class StoryView extends Activity {
                 view.startAnimation(rotate);
                 ImageButton topArrow = (ImageButton)findViewById(R.id.ConvertTop);
                 topArrow.startAnimation(rotate);
+            }
+        });
+
+        ImageButton joinView = (ImageButton) findViewById(R.id.TableJoinView);
+        joinView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO start join view
+
+            }
+        });
+
+        Button skipButton = (Button) findViewById(R.id.SkipButton);
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO skip mission
+            }
+        });
+
+        Button processButton = (Button) findViewById(R.id.ProcessButton);
+        processButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO process query
             }
         });
     }
