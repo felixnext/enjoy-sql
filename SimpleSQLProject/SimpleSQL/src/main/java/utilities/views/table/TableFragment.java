@@ -27,10 +27,12 @@ import ibr.androidlab.simplesql.R;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class TableFragment extends Fragment {
 
+    private int width = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.table_fragment,container, false);
+        View view = inflater.inflate(R.layout.table_fragment, container, false);
         TableLayout head = (TableLayout) view.findViewById(R.id.Header);
         TableLayout tb = (TableLayout) view.findViewById(R.id.TableData);
 
@@ -38,14 +40,12 @@ public class TableFragment extends Fragment {
         TableData data = new TableData();
 
         //add head to table
-        head.addView(createHeader(data.getTableHead(), R.drawable.table_top_orange, true));
+        head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
         //add data to table
-        for(int i = 0; i< data.getTableData().length; i++) {
-            int type = i%2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;
-            tb.addView(createRow(data.getTableData()[i],type, false));
+        for (int i = 0; i < data.getTableData().length; i++) {
+            int type = i % 2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;
+            tb.addView(createRow(data.getTableData()[i], type, false));
         }
-
-
 
 
         return view;
@@ -61,59 +61,50 @@ public class TableFragment extends Fragment {
     protected TableRow createRow(String[] tableHead, int typeOfCell, boolean head) {
         TableRow row = new TableRow(getActivity());
 
+
         TableRow.LayoutParams tlparams = new TableRow.LayoutParams(
                 TableRow.LayoutParams.WRAP_CONTENT,
                 TableRow.LayoutParams.WRAP_CONTENT);
         row.setLayoutParams(tlparams);
 
-        for(String content: tableHead) {
+        for (String content : tableHead) {
             TableCell tv = new TableCell(getActivity(), typeOfCell, R.drawable.table_cell_touched, head);
             tv.setTextColor(Color.BLACK);
-            tv.setPadding(7, 5, 7, 5);
+            //TODO dynamic size
+            tv.setWidth(200);
             tv.setBackground(getResources().getDrawable(typeOfCell));
             tv.setTextSize(getResources().getDimension(R.dimen.table_text_size));
-            tv.setText(content);
-            tv.setOnClickListener(new CellClickListener());
+            tv.setPadding(7, 5, 7, 5);
+
+            if (head) {
+                tv.setText(content + " \u25BC");
+                tv.setOnClickListener(new HeadClickListener());
+            } else {
+                tv.setText(content);
+                tv.setOnClickListener(new CellClickListener());
+            }
+
             row.addView(tv);
         }
 
+        if (head)
+            width = row.getWidth();
+
         return row;
     }
+}
 
-    protected TableRow createHeader(String[] tableHead,int typeOfCell, boolean head){
-        TableRow row = new TableRow(getActivity());
+class HeadClickListener implements View.OnClickListener {
 
-        TableRow.LayoutParams tlparams = new TableRow.LayoutParams(
-                TableRow.LayoutParams.WRAP_CONTENT,
-                TableRow.LayoutParams.WRAP_CONTENT);
-        row.setLayoutParams(tlparams);
-
-        for(String content: tableHead) {
-            Button button = new Button(getActivity());
-            button.setBackground(getResources().getDrawable(typeOfCell));
-            Spannable buttonLabel = new SpannableString(content + " ");
-            buttonLabel.setSpan(new ImageSpan(getActivity(), R.drawable.ic_action_expand,
-                    ImageSpan.ALIGN_BOTTOM), buttonLabel.length()-1, buttonLabel.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            button.setText(buttonLabel);
-            row.addView(button);
-
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //TODO where constraints 
-                }
-            });
-        }
-
-
-
-        return row;
+    @Override
+    public void onClick(View v) {
+        //TODO where constraints
     }
 }
 
 class CellClickListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
-        ((TableCell)view).swap();
+        ((TableCell) view).swap();
     }
 }
