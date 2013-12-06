@@ -11,9 +11,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a93da856-fe5a-4eb9-8d6b-71ddb1acc873" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a93da856-fe5a-4eb9-8d6b-71ddb1acc873" name="Default" comment="" />
     <ignored path="SimpleSQLProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
