@@ -2,22 +2,23 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_width="fill_parent"
     android:orientation="vertical">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/Header"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:background="#000"
         android:stretchColumns="*" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarStyle="outsideInset"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarStyle="insideOverlay"
         android:background="#000"
         android:fillViewport="true">
 
@@ -28,6 +29,27 @@
             android:stretchColumns="*" />
 
     </ScrollView>
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+        <TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_top_orange"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:textSize="@dimen/table_text_size"
+                android:id="@+id/TableName" />
+        </TableRow>
+        </TableLayout>
+
+
 </LinearLayout>
 
 

@@ -8,6 +8,7 @@ public class TableData {
 
     private String[] tableHead;
     private String[][] tableData;
+    private String name = "Test";
 
     public TableData(){
         //TODO get data
@@ -15,10 +16,14 @@ public class TableData {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
     private void createTestData() {
         String s = "test string";
-        int rows = 10;
-        int columns = 40;
+        int rows = 1;
+        int columns = 20;
         tableHead = new String[rows];
         tableData = new String[columns][rows];
 

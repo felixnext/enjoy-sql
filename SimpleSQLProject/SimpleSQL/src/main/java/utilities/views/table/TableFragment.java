@@ -1,6 +1,7 @@
 package utilities.views.table;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Build;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
+import android.util.TypedValue;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -29,6 +31,13 @@ public class TableFragment extends Fragment {
 
     private int width = 0;
 
+    private TableDeliverer deliverer;
+
+    public interface TableDeliverer {
+        //TODO right table class
+        public String deliverTable();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,7 +46,12 @@ public class TableFragment extends Fragment {
         TableLayout tb = (TableLayout) view.findViewById(R.id.TableData);
 
         //Data for table filling
+        //TODO table communication
         TableData data = new TableData();
+        String name = data.getName();
+        if(deliverer != null) {
+            name = "Table name: "+deliverer.deliverTable();
+        }
 
         //add head to table
         head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
@@ -47,6 +61,8 @@ public class TableFragment extends Fragment {
             tb.addView(createRow(data.getTableData()[i], type, false));
         }
 
+       TextView tableName = (TextView) view.findViewById(R.id.TableName);
+       tableName.setText(name);
 
         return view;
     }
@@ -63,7 +79,7 @@ public class TableFragment extends Fragment {
 
 
         TableRow.LayoutParams tlparams = new TableRow.LayoutParams(
-                TableRow.LayoutParams.WRAP_CONTENT,
+                TableRow.LayoutParams.FILL_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT);
         row.setLayoutParams(tlparams);
 
@@ -71,9 +87,9 @@ public class TableFragment extends Fragment {
             TableCell tv = new TableCell(getActivity(), typeOfCell, R.drawable.table_cell_touched, head);
             tv.setTextColor(Color.BLACK);
             //TODO dynamic size
-            tv.setWidth(200);
+            //tv.setWidth(200);
             tv.setBackground(getResources().getDrawable(typeOfCell));
-            tv.setTextSize(getResources().getDimension(R.dimen.table_text_size));
+            tv.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimensionPixelSize(R.dimen.table_text_size));
             tv.setPadding(7, 5, 7, 5);
 
             if (head) {
@@ -92,6 +108,22 @@ public class TableFragment extends Fragment {
 
         return row;
     }
+
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            deliverer = (TableDeliverer) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+    }
+
 }
 
 class HeadClickListener implements View.OnClickListener {

@@ -1,10 +1,13 @@
 package ibr.androidlab.simplesql;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -23,11 +26,13 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
+import android.os.Bundle;
+import android.app.FragmentManager;
 import utilities.views.MultiWordAutoCompleteView;
+import utilities.views.table.TableFragment;
 
 
-public class StoryView extends Activity {
+public class StoryView extends Activity implements TableFragment.TableDeliverer {
 
     final String[] array = {"SELECT", "FROM", "DISTINCT", "AS", "WHERE", "LIKE", "ORDER BY",
             "INNER JOIN", "ON", "IS NULL"};
@@ -136,4 +141,11 @@ public class StoryView extends Activity {
         return display.getHeight();
     }
 
+    @Override
+    public String deliverTable() {
+        //TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
+        return "TabbleData";
+
+
+    }
 }
