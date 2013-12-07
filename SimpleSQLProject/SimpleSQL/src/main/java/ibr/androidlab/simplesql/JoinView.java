@@ -38,7 +38,12 @@ public class JoinView extends Activity {
 	/**
 	 * Holds all tables that are provided by the mission
 	*/
-	HashSet<String> tables;
+	List<String[]> joinList = new List<String[]>();
+
+	/**
+	 * Holds the story of the current mission
+	 */
+	Story story;
 
 
 	@Override
@@ -46,6 +51,9 @@ public class JoinView extends Activity {
     	//process: load the interface
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.table_join_view);
+
+        //init: get the story here
+        //story = ;
 
         //TODO: might show loading interface here?
 
@@ -108,5 +116,12 @@ public class JoinView extends Activity {
    	*/
     private void updateUI() {
     	//TODO: implement this... PLEASE!
+    }
+
+    private void addTables() {
+    	//process: iterate through all tables in the 
+    	for (int i=0; i<story.tables.Length; i++) {
+    		//process: add table to the 
+    	}
     }
 }

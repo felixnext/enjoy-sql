@@ -2,8 +2,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/mainScrollView"
-    android:background="#000000"
-    >
+    android:scrollbars="none"
+    android:background="#000000">
 
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,35 +33,26 @@
             android:textSize="18sp"
             android:id="@+id/textView" />
 
-            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scrollbarStyle="outsideInset"
-                android:paddingLeft="1dp"
-                android:paddingRight="1dp"
-                android:layout_marginTop="10dip"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_below="@+id/textView"
-                android:id="@+id/scrollViewTable">
 
-                <fragment
-                    android:id="@+id/table_fragment"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:name="utilities.views.table.TableFragment"
-                    tools:layout="@layout/table_fragment" />
-            </HorizontalScrollView>
-
-
-
+        <fragment
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/textView"
+            android:id="@+id/table_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:name="utilities.views.table.TableFragment"
+            tools:layout="@layout/table_fragment" />
 
 
         <TableLayout
             android:id="@+id/table_actions"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/scrollViewTable"
+            android:layout_below="@+id/table_fragment"
             android:layout_marginTop="10dp"
             android:gravity="center">
 
@@ -75,15 +66,17 @@
                 android:layout_marginBottom="0dp"
                 android:gravity="center">
 
-                <ImageButton  android:id="@+id/ConvertTop"
+                <ImageButton
+                    android:id="@+id/ConvertTop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxHeight="10dp"
                     android:maxWidth="10dp"
                     android:background="@null"
-                    android:src="@drawable/top"/>
+                    android:src="@drawable/top" />
 
-                <ImageButton  android:id="@+id/TableJoinView"
+                <ImageButton
+                    android:id="@+id/TableJoinView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxHeight="10dp"
@@ -91,18 +84,19 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@null"
-                    android:src="@drawable/ic_action_select_all"/>
+                    android:src="@drawable/ic_action_select_all" />
 
-                <ImageButton  android:id="@+id/ConvertDown"
+                <ImageButton
+                    android:id="@+id/ConvertDown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxHeight="10dp"
                     android:maxWidth="10dp"
                     android:background="@null"
-                    android:src="@drawable/down"/>
+                    android:src="@drawable/down" />
 
             </TableRow>
-         </TableLayout>
+        </TableLayout>
 
         <utilities.views.MultiWordAutoCompleteView
             android:layout_width="fill_parent"

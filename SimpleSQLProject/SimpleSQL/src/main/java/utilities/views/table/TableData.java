@@ -22,7 +22,7 @@ public class TableData {
 
     private void createTestData() {
         String s = "test string";
-        int rows = 1;
+        int rows = 10;
         int columns = 20;
         tableHead = new String[rows];
         tableData = new String[columns][rows];
