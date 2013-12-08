@@ -130,7 +130,7 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
     public Table deliverTable() {
         Table table = null;
         //TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
-        /*
+
         ArrayList<StoryAbstract> stories = XmlLoader.getInstance().getAvailableStories();
         if (stories.size() > 0) {
             //TODO choice special story
@@ -139,7 +139,7 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
             if(tables.length > 0)  table = tables[0];
         } else {
             Log.v("STORY!!!", "Story did not load!");
-        } */
+        } 
         return table;
     }
 }
