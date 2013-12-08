@@ -76,6 +76,16 @@
                     android:src="@drawable/top" />
 
                 <ImageButton
+                    android:id="@+id/ConvertDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="10dp"
+                    android:maxWidth="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:src="@drawable/down" />
+
+                <ImageButton
                     android:id="@+id/TableJoinView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -84,16 +94,20 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@null"
-                    android:src="@drawable/ic_action_select_all" />
+                    android:src="@drawable/ic_action_add_to_queue" />
 
                 <ImageButton
-                    android:id="@+id/ConvertDown"
+                    android:id="@+id/ConditionsView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxHeight="10dp"
                     android:maxWidth="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:background="@null"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/ic_action_search" />
+
+
 
             </TableRow>
         </TableLayout>
