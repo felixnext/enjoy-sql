@@ -15,8 +15,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -49,8 +51,8 @@ public class TableFragment extends Fragment {
         //TODO table communication
         TableData data = new TableData();
         String name = data.getName();
-        if(deliverer != null) {
-            name = "Table name: "+deliverer.deliverTable();
+        if (deliverer != null) {
+            name = "Table name: " + deliverer.deliverTable();
         }
 
         //add head to table
@@ -61,8 +63,8 @@ public class TableFragment extends Fragment {
             tb.addView(createRow(data.getTableData()[i], type, false));
         }
 
-       TextView tableName = (TextView) view.findViewById(R.id.TableName);
-       tableName.setText(name);
+        TextView tableName = (TextView) view.findViewById(R.id.TableName);
+        tableName.setText(name);
 
         return view;
     }
@@ -89,7 +91,7 @@ public class TableFragment extends Fragment {
             //TODO dynamic size
             //tv.setWidth(200);
             tv.setBackground(getResources().getDrawable(typeOfCell));
-            tv.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimensionPixelSize(R.dimen.table_text_size));
+            tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.table_text_size));
             tv.setPadding(7, 5, 7, 5);
 
             if (head) {
@@ -108,6 +110,7 @@ public class TableFragment extends Fragment {
 
         return row;
     }
+
 
 
     @Override
