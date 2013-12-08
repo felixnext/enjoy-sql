@@ -8,11 +8,14 @@ import ibr.androidlab.simplesql.xmlLoader.data.Table;
 public class ViewTable {
 
     private Table table;
+    private String[][] content;
     private TableCell[][] tableFormats;
 
     public ViewTable(Table table) {
         this.table = table;
-        //TODO right size
-        tableFormats = new TableCell[1][1];
+        content = table.getTableContent();
+        tableFormats = new TableCell[content.length][content[0].length];
     }
+
+
 }
