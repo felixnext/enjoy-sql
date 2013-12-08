@@ -1,14 +1,25 @@
 package ibr.androidlab.simplesql.xmlLoader;
 
+import android.os.Environment;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+import ibr.androidlab.simplesql.xmlLoader.data.Table;
 import ibr.androidlab.simplesql.xmlLoader.data.Task;
 
 public class Story {
 
         public final String title;
-        /** Unique id for story */
-        public final int id;
+        /** Unique - possibly numerical - id for story */
+        public final String id;
         /**relational schema tables */
-        public final String[] tables;
+        public final Table[] tables;
         /** tasks for the story. They all depend
              on the same schema. */
         public final Task[] tasks;
@@ -20,10 +31,14 @@ public class Story {
      * @param tables
      * @param tasks
      */
-        public Story(String title, int id, String[] tables,Task[] tasks) {
+        public Story(String title, String id, Table[] tables,Task[] tasks) {
             this.title = title;
             this.id = id;
             this.tables=tables;
             this.tasks=tasks;
         }
+
+
+
+
 }
