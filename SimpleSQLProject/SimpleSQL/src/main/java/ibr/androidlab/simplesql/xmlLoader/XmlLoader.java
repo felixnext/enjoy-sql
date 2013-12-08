@@ -156,7 +156,7 @@ public class XmlLoader {
         // reading Story in
         try {
             // Perhaps some prefix for home directory here?
-            FileInputStream fIn = new FileInputStream(abstr.id);
+            FileInputStream fIn = new FileInputStream("~/.enjoy-sql/" + abstr.id+abstr.title + ".xml");
             InputStreamReader is = new InputStreamReader(fIn);
             XmlPullParser parser = Xml.newPullParser();
 
@@ -208,7 +208,7 @@ public class XmlLoader {
     }
 
     private XmlLoader() {
-        stories.add(new StoryAbstract("2342","Mixed Pickles"));
+        stories.add(new StoryAbstract("01","Example Story"));
     }
 
     public static XmlLoader getInstance() {
