@@ -15,6 +15,7 @@ public class Table {
     // only accessible after getTableContent was called first
     private String[] columns;
     private String[] types;
+    private int rowCount;
 
     public Table(String name) {
         this.name = name;
@@ -30,13 +31,17 @@ public class Table {
         return types;
     }
 
+    public int getRowCount() {
+        return rowCount;
+    }
 
-    public String[][] getTableContent(String table) {
+
+    public String[][] getTableContent() {
         ArrayList<String[]> rows = new ArrayList<String[]>();
         String[] row = null;
         try {
             // some prefix missing? perhaps like this? TODO
-            FileInputStream file = new FileInputStream("~/.enjoysql/" + table + ".csv");
+            FileInputStream file = new FileInputStream("~/.enjoysql/" + name + ".csv");
             InputStreamReader in = new InputStreamReader(file);
             BufferedReader reader = new BufferedReader(in);
 
@@ -81,8 +86,9 @@ public class Table {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
-        return new String[1][1];
+        String[][] twoDimArray = null;
+        rowCount = rows.size();
+        return rows.toArray(twoDimArray);
     }
     public static int countOccurrences(String haystack, char needle) {
 
