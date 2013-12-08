@@ -1,0 +1,3 @@
+topic:varchar(40) PrimaryKey;description:varchar(255)
+Novel;
+Fantasy;

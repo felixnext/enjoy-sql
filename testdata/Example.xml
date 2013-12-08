@@ -1,0 +1,43 @@
+<Story id="01" name="Example Story">
+    <Tables>
+        <Table name="Books">
+            books.csv
+        </Table>
+        <Table name="Genres">
+            topics.csv
+        </Table>
+        <Table name="Authors">
+            authors.csv
+        </Table>
+    </Tables>
+    <Tasks>
+        <Task nr="1">
+            <StoryTelling>
+                <Text>
+                    Tell me the Name, Samuel Langhorne Clemens is better known by!
+                </Text>
+            </StoryTelling>
+            <Level>
+                Beginner
+            </Level>
+            <Operators>
+                <Operator>
+                    Join
+                </Operator>
+            </Operators>
+            <Reward>
+                2000
+            </Reward>
+            <CanFollow>
+                <PostTask>
+                    1
+                </PostTask>
+            </CanFollow>
+            <ResultSet>
+                SELECT pseudonym FROM authors WHERE name='Samuel Langhorne Clemens'
+            </ResultSet>
+        </Task>
+    </Tasks>
+</Story>
+
+

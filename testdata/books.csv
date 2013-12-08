@@ -1,0 +1,14 @@
+isbn:varchar(20) PrimaryKey;title:varchar(255);author:varchar(255) references author;topic:varchar(255) references Topic;year:varchar(4)
+978-3-608-93541-7;The Fellowship of the Ring;J.R.R. Tolkien;Fantasy;1954
+978-3-608-93542-4;The Two Towers;J.R.R. Tolkien;Fantasy;1954
+978-3-608-93543-1;The Return of the King;J.R.R. Tolkien;Fantasy;1954
+3-7941-0142-1;Alarm im Teppich-Reich;Terence David John Pratchett;Fantasy;1972
+3-442-23254-6;Der Sonne dunkle Seite;Terence David John Pratchett;Fantasy;1977
+3-442-23434-4;Strata oder die Flachwelt;Terence David John Pratchett;Fantasy;1983
+The Old Man and the Sea;Ernest Hemmingway;Novel;1952
+For Whom the Bell Tolls;Ernest Hemmingway;Novel;1940
+A Connecticut Yankee in King Arthur´s Court;Samuel Langhorne Clemens;Novel;1889
+
+
+
+

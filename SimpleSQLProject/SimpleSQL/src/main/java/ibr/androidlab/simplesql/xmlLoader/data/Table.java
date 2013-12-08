@@ -35,7 +35,10 @@ public class Table {
         return rowCount;
     }
 
-
+    /**
+     * Important: columns, types and rowcount are only available, after this method was called.
+     * @return two-dimensional Array containing the table Content.
+     */
     public String[][] getTableContent() {
         ArrayList<String[]> rows = new ArrayList<String[]>();
         String[] row = null;

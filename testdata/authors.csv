@@ -1,0 +1,5 @@
+firstname_lastname:varchar(255) PrimaryKey;pseudonym:varchar(255);birthday:varchar(20);died_on:varchar(20)
+Samuel Langhorne Clemens;Mark Twain;30.11.1835;21.04.1910
+John Ronald Reuel Tolkien;;03.01.1892;02.09.1973
+Terence David John Pratchett;Terry Pratchett;
+Ernest Hemmingway;;21.07.1899;02.07.2961
