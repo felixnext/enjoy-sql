@@ -29,7 +29,7 @@ public class TableData {
 
 
         for(int i = 0; i< rows; i++){
-            tableHead[i] = s;
+            tableHead[i] = s + i;
         }
 
         for(int i = 0; i< columns; i++){

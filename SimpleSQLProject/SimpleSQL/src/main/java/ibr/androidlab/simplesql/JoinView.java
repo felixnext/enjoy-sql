@@ -21,8 +21,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 
+import ibr.androidlab.simplesql.xmlLoader.Story;
 import utilities.views.MultiWordAutoCompleteView;
 
 /**
@@ -38,7 +40,7 @@ public class JoinView extends Activity {
 	/**
 	 * Holds all tables that are provided by the mission
 	*/
-	List<String[]> joinList = new List<String[]>();
+	List<String[]> joinList = new LinkedList<String[]>();
 
 	/**
 	 * Holds the story of the current mission
@@ -69,9 +71,10 @@ public class JoinView extends Activity {
      */
     private void addTable(String table) {
     	//safty: check if the table exists (might not be neccessary)
+        /*
     	if (!tables.contains(table))
-    		return;
-
+    		return;*/
+        //TODO Sorry Felix das war nicht kompilierbar
     	//process: add the table
     	joinTables.add(table);
     }
@@ -120,7 +123,7 @@ public class JoinView extends Activity {
 
     private void addTables() {
     	//process: iterate through all tables in the 
-    	for (int i=0; i<story.tables.Length; i++) {
+    	for (int i=0; i<story.tables.length; i++) {
     		//process: add table to the 
     	}
     }

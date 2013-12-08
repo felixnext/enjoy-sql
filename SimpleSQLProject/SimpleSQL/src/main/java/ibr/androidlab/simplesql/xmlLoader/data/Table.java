@@ -11,11 +11,23 @@ import java.util.StringTokenizer;
  * Created by arne on 06.12.13.
  */
 public class Table {
+
     private String name;
+
+    public void setColumns(String[] columns) {
+        this.columns = columns;
+    }
+
     // only accessible after getTableContent was called first
     private String[] columns;
     private String[] types;
     private int rowCount;
+
+    public void setContent(String[][] content) {
+        this.content = content;
+    }
+
+    private String[][] content;
 
     public Table(String name) {
         this.name = name;
@@ -35,11 +47,16 @@ public class Table {
         return rowCount;
     }
 
+    public String getName() {
+        return name;
+    }
+
     /**
      * Important: columns, types and rowcount are only available, after this method was called.
      * @return two-dimensional Array containing the table Content.
      */
     public String[][] getTableContent() {
+        if(content!=null) return content;
         ArrayList<String[]> rows = new ArrayList<String[]>();
         String[] row = null;
         try {
@@ -91,7 +108,8 @@ public class Table {
         }
         String[][] twoDimArray = null;
         rowCount = rows.size();
-        return rows.toArray(twoDimArray);
+        content = rows.toArray(twoDimArray);
+        return content;
     }
     public static int countOccurrences(String haystack, char needle) {
 

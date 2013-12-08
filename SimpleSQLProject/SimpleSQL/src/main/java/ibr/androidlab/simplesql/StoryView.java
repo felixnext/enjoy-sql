@@ -28,6 +28,14 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.app.FragmentManager;
+
+import java.util.ArrayList;
+
+import ibr.androidlab.simplesql.xmlLoader.Story;
+import ibr.androidlab.simplesql.xmlLoader.StoryAbstract;
+import ibr.androidlab.simplesql.xmlLoader.XmlLoader;
+import ibr.androidlab.simplesql.xmlLoader.data.Table;
+import ibr.androidlab.simplesql.xmlLoader.storytelling.Image;
 import utilities.views.MultiWordAutoCompleteView;
 import utilities.views.table.TableFragment;
 
@@ -52,59 +60,28 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
         sqlField.setThreshold(1);
         sqlField.setAdapter(adapter);
 
-        //image in header of table
-        /*
-        TextView tv = (TextView) findViewById(R.id.TextView12);
-        Resources res = getResources();
-        Drawable img = res.getDrawable(R.drawable.trichter);
-        img.setBounds(0, 0, 50, 50);
-        tv.setCompoundDrawables(null,null,img,null);
-        */
-
         HorizontalScrollView childScroll = (HorizontalScrollView) findViewById(R.id.scrollViewTable);
         childScroll.getLayoutParams().height = ((int) (ScHgt(this) * SCROLL_VIEW_SIZE));
 
 
-
-        /*
-        parentScroll.setOnTouchListener(new View.OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.v("TAG","PARENT TOUCH");
-                findViewById(R.id.scrollViewTable).getParent().requestDisallowInterceptTouchEvent(false);
-                return false;
-            }
-        });
-        childScroll.setOnTouchListener(new View.OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                Log.v("TAG","CHILD TOUCH");
-                // Disallow the touch request for parent scroll on touch of child view
-                v.getParent().requestDisallowInterceptTouchEvent(true);
-                return false;
-            }
-        });*/
-
-
-        ImageButton topArrow = (ImageButton)findViewById(R.id.ConvertTop);
+        ImageButton topArrow = (ImageButton) findViewById(R.id.ConvertTop);
         topArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Animation rotate = AnimationUtils.loadAnimation(view.getContext(), R.anim.rotate_centre_clockwise);
                 view.startAnimation(rotate);
-                ImageButton downArrow = (ImageButton)findViewById(R.id.ConvertDown);
+                ImageButton downArrow = (ImageButton) findViewById(R.id.ConvertDown);
                 downArrow.startAnimation(rotate);
             }
         });
 
-        ImageButton downArrow = (ImageButton)findViewById(R.id.ConvertDown);
+        ImageButton downArrow = (ImageButton) findViewById(R.id.ConvertDown);
         downArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Animation rotate = AnimationUtils.loadAnimation(view.getContext(), R.anim.rotate_centre);
                 view.startAnimation(rotate);
-                ImageButton topArrow = (ImageButton)findViewById(R.id.ConvertTop);
+                ImageButton topArrow = (ImageButton) findViewById(R.id.ConvertTop);
                 topArrow.startAnimation(rotate);
             }
         });
@@ -115,6 +92,14 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
             public void onClick(View v) {
                 //TODO start join view
 
+            }
+        });
+
+        ImageButton conditionView = (ImageButton) findViewById(R.id.ConditionsView);
+        conditionView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO start condition view
             }
         });
 
@@ -142,10 +127,19 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
     }
 
     @Override
-    public String deliverTable() {
+    public Table deliverTable() {
+        Table table = null;
         //TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
-        return "TabbleData";
-
-
+        /*
+        ArrayList<StoryAbstract> stories = XmlLoader.getInstance().getAvailableStories();
+        if (stories.size() > 0) {
+            //TODO choice special story
+            Story story = XmlLoader.getInstance().getStoryByAbstract(stories.get(0));
+            Table[] tables = story.tables;
+            if(tables.length > 0)  table = tables[0];
+        } else {
+            Log.v("STORY!!!", "Story did not load!");
+        } */
+        return table;
     }
 }
