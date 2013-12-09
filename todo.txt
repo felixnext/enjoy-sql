@@ -3,7 +3,11 @@ Task due to Friday 13th
         - deploying stories to right directory
     - UserState (generally concerning Stories)
     - SharedData Singleton
-        - We need some SharedData that is visible everywhere
+        - SharedData needs to be used in loading functions (e.g. StoryView)
+    - Join View
+        - Implement List View Fragment
+        - Implement Drag and Drop functionality
+        - Create View for selection of attributes used in the join process
 
 
 According to our timetable

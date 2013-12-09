@@ -18,13 +18,16 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.content.SharedPreferences;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import ibr.androidlab.simplesql.Database.SharedData;
 import ibr.androidlab.simplesql.xmlLoader.Story;
+import ibr.androidlab.simplesql.xmlLoader.XmlLoader;
 import utilities.views.MultiWordAutoCompleteView;
 
 /**
@@ -45,7 +48,7 @@ public class JoinView extends Activity {
 	/**
 	 * Holds the story of the current mission
 	 */
-	Story story;
+	//Story story;
 
 
 	@Override
@@ -54,15 +57,22 @@ public class JoinView extends Activity {
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.table_join_view);
 
-        //init: get the story here
-        //story = ;
+        //init: get the data here
+        //story = XmlLoader.getInstance().getStoryByAbstract((StoryAbstract)XmlLoader.getInstance().getAvailableStories().get(0));
+
 
         //TODO: might show loading interface here?
 
         //process: load join data
+        for (int i=0; i < SharedData.getInstance().currentStory.tables.length; i++) {
+            //TODO: create interface element
 
-        //process: fill interface
-        //MultiWordAutoCompleteView sqlField = (MultiWordAutoCompleteView) findViewById(R.id.query_field);
+            //process: iterate through the columns
+            for (int j=0; j < SharedData.getInstance().currentStory.tables[i].getColumns().length; j++) {
+                //TODO: add stuff to the list
+
+            }
+        }
     }
 
     /**
@@ -72,9 +82,15 @@ public class JoinView extends Activity {
     private void addTable(String table) {
     	//safty: check if the table exists (might not be neccessary)
         /*
-    	if (!tables.contains(table))
-    		return;*/
-        //TODO Sorry Felix das war nicht kompilierbar
+        boolean val = false;
+        for (int i=0; i<SharedData.getInstance().currentStory.tables.length; i++) {
+            if (SharedData.getInstance().currentStory.tables[i].equals(table)) {
+                val = true;
+                break;
+            }
+        }
+        if (!val) return;
+        */
     	//process: add the table
     	joinTables.add(table);
     }
