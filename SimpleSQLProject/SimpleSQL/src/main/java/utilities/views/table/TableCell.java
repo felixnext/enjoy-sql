@@ -42,4 +42,8 @@ public class TableCell extends TextView {
         }
 
     }
+
+    public boolean isSelected() {
+        return touched;
+    }
 }

@@ -24,6 +24,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import ibr.androidlab.simplesql.R;
+import ibr.androidlab.simplesql.xmlLoader.data.Table;
 
 /**
  * Created by Yevgen Pikus on 23/11/13.
@@ -34,10 +35,11 @@ public class TableFragment extends Fragment {
     private int width = 0;
 
     private TableDeliverer deliverer;
+    private ViewTable viewTable;
 
     public interface TableDeliverer {
         //TODO right table class
-        public String deliverTable();
+        public Table deliverTable();
     }
 
     @Override
@@ -48,25 +50,35 @@ public class TableFragment extends Fragment {
         TableLayout tb = (TableLayout) view.findViewById(R.id.TableData);
 
         //Data for table filling
-        //TODO table communication
+        //TODO table communication & ViewTable
         TableData data = new TableData();
-        String name = data.getName();
+        String name = "";
         if (deliverer != null) {
-            name = "Table name: " + deliverer.deliverTable();
+            Table table = deliverer.deliverTable();
+            if(table == null) table = createTable(data);
+            name = "Table name: " + table.getName();
+            viewTable = new ViewTable(table);
         }
 
         //add head to table
-        head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true));
+        head.addView(createRow(data.getTableHead(), R.drawable.table_top_orange, true, -1));
         //add data to table
         for (int i = 0; i < data.getTableData().length; i++) {
             int type = i % 2 == 0 ? R.drawable.table_cell_white : R.drawable.table_top_ye;
-            tb.addView(createRow(data.getTableData()[i], type, false));
+            tb.addView(createRow(data.getTableData()[i], type, false, i));
         }
 
         TextView tableName = (TextView) view.findViewById(R.id.TableName);
         tableName.setText(name);
 
         return view;
+    }
+
+    private Table createTable(TableData data) {
+        Table table = new Table("Test Table");
+        table.setColumns(data.getTableHead());
+        table.setContent(data.getTableData());
+        return table;
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -76,7 +88,7 @@ public class TableFragment extends Fragment {
      * @param typeOfCell Type of cell format: White or colored Cells.
      * @return New TableRaw object filled with data.
      */
-    protected TableRow createRow(String[] tableHead, int typeOfCell, boolean head) {
+    protected TableRow createRow(String[] tableHead, int typeOfCell, boolean head, int rowNumber) {
         TableRow row = new TableRow(getActivity());
 
 
@@ -85,22 +97,26 @@ public class TableFragment extends Fragment {
                 TableRow.LayoutParams.WRAP_CONTENT);
         row.setLayoutParams(tlparams);
 
-        for (String content : tableHead) {
+
+        for (int columnNumber = 0; columnNumber < tableHead.length; columnNumber++) {
+            String content = tableHead[columnNumber];
             TableCell tv = new TableCell(getActivity(), typeOfCell, R.drawable.table_cell_touched, head);
             tv.setTextColor(Color.BLACK);
-            //TODO dynamic size
-            //tv.setWidth(200);
             tv.setBackground(getResources().getDrawable(typeOfCell));
             tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.table_text_size));
             tv.setPadding(7, 5, 7, 5);
 
             if (head) {
                 tv.setText(content + " \u25BC");
-                tv.setOnClickListener(new HeadClickListener());
+                tv.setOnClickListener(new HeadClickListener(viewTable));
             } else {
                 tv.setText(content);
                 tv.setOnClickListener(new CellClickListener());
+                viewTable.setCell(rowNumber, columnNumber, tv);
             }
+
+
+            tv.setTag(content);
 
             row.addView(tv);
         }
@@ -110,7 +126,6 @@ public class TableFragment extends Fragment {
 
         return row;
     }
-
 
 
     @Override
@@ -131,15 +146,26 @@ public class TableFragment extends Fragment {
 
 class HeadClickListener implements View.OnClickListener {
 
+    private ViewTable viewTable;
+
+    /**
+     * @param viewTable Associated table view to this table fragment.
+     */
+    public HeadClickListener(ViewTable viewTable) {
+        super();
+        this.viewTable = viewTable;
+    }
+
     @Override
     public void onClick(View v) {
-        //TODO where constraints
+        String tag = (String) v.getTag();
+        viewTable.selectColumn(tag);
     }
 }
 
 class CellClickListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
-        ((TableCell) view).swap();
+        //((TableCell) view).swap();
     }
 }
