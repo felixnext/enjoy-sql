@@ -1,0 +1,19 @@
+Task due to Friday 13th
+    - XMlloader
+        - deploying stories to right directory
+    - UserState (generally concerning Stories)
+    - SharedData Singleton
+        - SharedData needs to be used in loading functions (e.g. StoryView)
+    - Join View
+        - Implement List View Fragment
+        - Implement Drag and Drop functionality
+        - Create View for selection of attributes used in the join process
+
+
+According to our timetable
+    - setting up the Story-Dealer server
+    - shop
+    - achievement-system
+    - Story-Upload
+    - Language-Selection
+        - Stories need a Language?!
