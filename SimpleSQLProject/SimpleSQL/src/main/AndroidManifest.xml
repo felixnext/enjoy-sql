@@ -23,6 +23,116 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    
+        android:icon="@drawable/icon_database"
+        android:theme="@android:style/Theme.Holo" 
+        android:background="#FFFFFF"
+       >
+      <activity
+           android:name="ibr.androidlab.simplesql.MainActivity"
+    	   android:theme="@android:style/Theme.NoTitleBar">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity> 
+        
+        <activity
+            android:name="ibr.androidlab.simplesql.myMainScreen">
+        </activity>
+        
+         <activity
+            android:name="ibr.androidlab.simplesql.SecondActivity"
+            android:label="@string/menu">
+         <intent-filter>
+                <action android:name="com.example.menu" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ibr.androidlab.simplesql.settings"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.settings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
+         
+       <activity
+            android:name="ibr.androidlab.simplesql.shop"
+            android:label="@string/shop">
+            <intent-filter>
+                <action android:name="com.example.shop" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name="ibr.androidlab.simplesql.difficulty"
+            android:label="@string/difficulty">
+            <intent-filter>
+                <action android:name="com.example.difficulty" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>          
+                       
+         <activity
+            android:name="ibr.androidlab.simplesql.language"
+            android:label="@string/language">
+            <intent-filter>
+                <action android:name="com.example.language" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        
+         <activity
+            android:name="ibr.androidlab.simplesql.profile"
+            android:label="@string/profile">
+            <intent-filter>
+                <action android:name="com.example.profile" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+
+         <activity
+            android:name="ibr.androidlab.simplesql.storyupload"
+            android:label="@string/storyupload">
+            <intent-filter>
+                <action android:name="com.example.storyupload" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+    
+              <activity
+            android:name="ibr.androidlab.simplesql.storyboard"
+            android:label="@string/storyboard">
+            <intent-filter>
+                <action android:name="com.example.storyboard" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        
+         <activity
+            android:name="ibr.androidlab.simplesql.introduction"
+            android:label="@string/introduction">
+            <intent-filter>
+                <action android:name="com.example.introduction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+      
+            <activity
+            android:name="ibr.androidlab.simplesql.question"
+            android:label="@string/introduction">
+            <intent-filter>
+                <action android:name="com.example.question" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        
     </application>
 
 </manifest>
