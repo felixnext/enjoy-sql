@@ -1,0 +1,15 @@
+Task due to Friday 13th
+    - XMlloader
+        - deploying stories to right directory
+    - UserState (generally concerning Stories)
+    - SharedData Singleton
+        - We need some SharedData that is visible everywhere
+
+
+According to our timetable
+    - setting up the Story-Dealer server
+    - shop
+    - achievement-system
+    - Story-Upload
+    - Language-Selection
+        - Stories need a Language?!
