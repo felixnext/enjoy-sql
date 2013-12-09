@@ -1,8 +1,46 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Light">
-        <!-- Customize your theme here. -->
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light">
     </style>
 
+  <style name="btnStylelemon_chiffon" parent="@android:style/Widget.Button">
+       <item name="android:textSize">15sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">#FFFFFF</item>
+       <item name="android:gravity">center</item>
+       <item name="android:shadowColor">#797a46</item>
+       <item name="android:shadowDx">1</item>
+       <item name="android:shadowDy">1</item>
+       <item name="android:shadowRadius">0.6</item>
+       <item name="android:background">@drawable/custom_btn_lemon_chiffon</item>
+       <item name="android:padding">10dip</item>
+   </style>
+
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#00BFFF</color>
+    <color name="beige">#EED2EE</color> 
+    <color name="yellow">#FFB90F</color> 
+    <color name="transparent">#FFFFFFFF</color>
+    <color name="grey">#68838B</color>
+    
+       <style name="customprogressbar" parent="android:Widget.ProgressBar.Horizontal">
+          <item name="android:indeterminateOnly">false</item>
+          <item name="android:progressDrawable">@drawable/customprogressbar</item>
+          <item name="android:minHeight">10dip</item>
+          <item name="android:maxHeight">20dip</item>
+        </style>       
+
+   
+
+    <style name="spinner" parent="android:Theme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+       
+       
 </resources>
+
+

@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="menu">Menu</string>
+    
+    <string name="shop">Shop</string>
+    
+    <string name="profile">Profile</string>
+
+    <string name="introduction">Introduction</string>
+
+    <string name="language">Language</string>
+
+    <string name="difficulty">Difficulty</string>
+
+    <string name="pleaseWait">Loading...</string>
+	
+    <string name="storyboard">Storyboard</string>
+
+    <string name="storyupload">Storyupload</string>
+    <string name="_20">20</string>
+ 
+    <string name="country_prompt">Choose a country</string>
+
+ 
+   <string-array name="country_arrays">
+
+    <item>Bachelor Watson</item>
+   
+    </string-array>
+
+
+    <string name="difficulty_prompt">Choose a level of difficulty</string>
+
+ 
+   <string-array name="difficulty_arrays">
+ 
+    <item>Beginner</item>
+ 
+    <item>Advanced</item>
+
+    <item>Master</item>
+
+    </string-array>
+
 
     <string name="app_name">SimpleSQL</string>
     <string name="title_section1">Section 1</string>
