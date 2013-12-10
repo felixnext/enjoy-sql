@@ -1,6 +1,7 @@
 package utilities.views.list;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.ArrayAdapter;
 import ibr.androidlab.simplesql.Database.SharedData;
 import ibr.androidlab.simplesql.R;
 import ibr.androidlab.simplesql.xmlLoader.data.Table;
+import utilities.views.table.TableFragment;
 
 /**
  * Fragment for the Display of table contents

@@ -130,16 +130,17 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
     public Table deliverTable() {
         Table table = null;
         //TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
+        XmlLoader loader = XmlLoader.getInstance();
+        ArrayList<StoryAbstract> stories = loader.getAvailableStories();
 
-        ArrayList<StoryAbstract> stories = XmlLoader.getInstance().getAvailableStories();
         if (stories.size() > 0) {
             //TODO choice special story
             Story story = XmlLoader.getInstance().getStoryByAbstract(stories.get(0));
             Table[] tables = story.tables;
-            if(tables.length > 0)  table = tables[0];
+            if(table != null &&  tables.length > 0)  table = tables[0];
         } else {
             Log.v("STORY!!!", "Story did not load!");
-        } 
+        }
         return table;
     }
 }

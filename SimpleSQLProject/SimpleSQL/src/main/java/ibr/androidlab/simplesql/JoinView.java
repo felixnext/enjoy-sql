@@ -142,7 +142,7 @@ public class JoinView extends Activity {
     }
 
     private void addTables() {
-    	//process: iterate through all tables in the 
+    	//process: iterate through all tables in the
     	for (int i=0; i<SharedData.getInstance().currentStory.tables.length; i++) {
     		//process: add table to the 
     	}
