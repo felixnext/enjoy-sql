@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -13,6 +14,8 @@ import java.util.StringTokenizer;
 public class Table {
 
     private String name;
+    // workaround for DropBox purposes ;-)
+    private String id;
 
     public void setColumns(String[] columns) {
         this.columns = columns;
@@ -61,8 +64,8 @@ public class Table {
         String[] row = null;
         try {
             // some prefix missing? perhaps like this? TODO
-            FileInputStream file = new FileInputStream("~/.enjoysql/" + name + ".csv");
-            InputStreamReader in = new InputStreamReader(file);
+            URL url = new URL("https://www.dropbox.com/s/" + id + "/" + name + ".csv");
+            InputStreamReader in = new InputStreamReader(url.openStream());
             BufferedReader reader = new BufferedReader(in);
 
 

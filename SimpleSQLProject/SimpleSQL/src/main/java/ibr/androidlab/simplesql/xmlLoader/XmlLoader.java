@@ -5,13 +5,19 @@ import java.io.InputStreamReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import android.content.res.Resources;
 import android.util.Xml;
 
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import ibr.androidlab.simplesql.xmlLoader.data.Table;
 import ibr.androidlab.simplesql.xmlLoader.storytelling.*;
@@ -148,18 +154,19 @@ public class XmlLoader {
         return telling.toArray(tell);
     }
 
-    public Story getStoryByAbstract(StoryAbstract abstr) {
+    public Story getStoryByAbstract(StoryAbstract abstr)  {
         Table[] tableNames = null;
         Task[] tasks = null;
         String id = null;
         String name = null;
+
         // reading Story in
         try {
             // Perhaps some prefix for home directory here?
-            FileInputStream fIn = new FileInputStream("~/.enjoy-sql/" + abstr.id+abstr.title + ".xml");
-            InputStreamReader is = new InputStreamReader(fIn);
-            XmlPullParser parser = Xml.newPullParser();
+            URL url = new URL("https://www.dropbox.com/s/j5lguk55tfnr7kw/01%20Example%20Story.xml");
 
+            InputStreamReader is = new InputStreamReader(url.openStream());
+            XmlPullParser parser = Xml.newPullParser();
             parser.setInput(is);
             parser.require(XmlPullParser.START_DOCUMENT,null,"story");
             // Query story's name and id
@@ -186,7 +193,9 @@ public class XmlLoader {
         } catch (XmlPullParserException xml) {
             xml.printStackTrace();
         }
-
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
 
 

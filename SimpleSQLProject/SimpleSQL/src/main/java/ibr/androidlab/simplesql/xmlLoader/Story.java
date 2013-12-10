@@ -32,9 +32,6 @@ public class Story {
      * @param tasks
      */
         public Story(String title, String id, Table[] tables,Task[] tasks) {
-            if(tables==null) {
-
-            }
             this.title = title;
             this.id = id;
             this.tables=tables;
