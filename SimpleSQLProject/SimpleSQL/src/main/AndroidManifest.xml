@@ -1,33 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+  <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ibr.androidlab.simplesql"
+    package="com.example"
     android:versionCode="1"
-    android:versionName="1.0" >
-
-
-    <uses-sdk
-        android:minSdkVersion="18"
-        android:targetSdkVersion="18" />
-
-
-    <application
-        android:debuggable="true"
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="ibr.androidlab.simplesql.StoryView"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+    android:versionName="1.0">
     
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="11" />
+ 
+    <application
+        android:allowBackup="true"
         android:icon="@drawable/icon_database"
+        android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo" 
         android:background="#FFFFFF"
        >
@@ -48,7 +32,7 @@
             android:name="ibr.androidlab.simplesql.SecondActivity"
             android:label="@string/menu">
          <intent-filter>
-                <action android:name="com.example.menu" />
+                <action android:name="ibr.androidlab.simplesql.menu" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -57,7 +41,7 @@
             android:name="ibr.androidlab.simplesql.settings"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="com.example.settings" />
+                <action android:name="ibr.androidlab.simplesql.settings" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -67,7 +51,7 @@
             android:name="ibr.androidlab.simplesql.shop"
             android:label="@string/shop">
             <intent-filter>
-                <action android:name="com.example.shop" />
+                <action android:name="ibr.androidlab.simplesql.shop" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -77,7 +61,7 @@
             android:name="ibr.androidlab.simplesql.difficulty"
             android:label="@string/difficulty">
             <intent-filter>
-                <action android:name="com.example.difficulty" />
+                <action android:name="ibr.androidlab.simplesql.difficulty" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>          
@@ -86,7 +70,7 @@
             android:name="ibr.androidlab.simplesql.language"
             android:label="@string/language">
             <intent-filter>
-                <action android:name="com.example.language" />
+                <action android:name="ibr.androidlab.simplesql.language" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
@@ -95,7 +79,7 @@
             android:name="ibr.androidlab.simplesql.profile"
             android:label="@string/profile">
             <intent-filter>
-                <action android:name="com.example.profile" />
+                <action android:name="ibr.androidlab.simplesql.profile" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
@@ -104,7 +88,7 @@
             android:name="ibr.androidlab.simplesql.storyupload"
             android:label="@string/storyupload">
             <intent-filter>
-                <action android:name="com.example.storyupload" />
+                <action android:name="ibr.androidlab.simplesql.storyupload" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
@@ -113,7 +97,7 @@
             android:name="ibr.androidlab.simplesql.storyboard"
             android:label="@string/storyboard">
             <intent-filter>
-                <action android:name="com.example.storyboard" />
+                <action android:name="ibr.androidlab.simplesql.storyboard" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
@@ -122,7 +106,7 @@
             android:name="ibr.androidlab.simplesql.introduction"
             android:label="@string/introduction">
             <intent-filter>
-                <action android:name="com.example.introduction" />
+                <action android:name="ibr.androidlab.simplesql.introduction" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
@@ -131,12 +115,10 @@
             android:name="ibr.androidlab.simplesql.question"
             android:label="@string/introduction">
             <intent-filter>
-                <action android:name="com.example.question" />
+                <action android:name="ibr.androidlab.simplesql.question" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity> 
         
     </application>
-
-
 </manifest>
