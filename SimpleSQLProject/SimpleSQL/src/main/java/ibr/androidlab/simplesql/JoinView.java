@@ -61,7 +61,6 @@ public class JoinView extends Activity {
 
         //process: load join data
 
-    }
 
     /**
      * Add class to the join list
