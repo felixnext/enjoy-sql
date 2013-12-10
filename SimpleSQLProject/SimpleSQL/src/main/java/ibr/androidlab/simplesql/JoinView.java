@@ -61,12 +61,6 @@ public class JoinView extends Activity {
 
         //process: load join data
 
-        //process: fill interface
-        //MultiWordAutoCompleteView sqlField = (MultiWordAutoCompleteView) findViewById(R.id.query_field);
-    }
-
-    private void startDragEvent() {
-    	//TODO start the drag event here
     }
 
     /**
