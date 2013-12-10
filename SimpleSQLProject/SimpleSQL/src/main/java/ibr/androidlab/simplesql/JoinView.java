@@ -62,6 +62,11 @@ public class JoinView extends Activity {
         //process: load join data
 
 
+        //process: fill interface
+        //MultiWordAutoCompleteView sqlField = (MultiWordAutoCompleteView) findViewById(R.id.query_field);
+    }
+
+
     /**
      * Add class to the join list
      * @param table the (unique) name of the table that should be added

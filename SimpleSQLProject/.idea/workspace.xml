@@ -110,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JoinView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java">
+      <file leaf-file-name="ListFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-0.8669528" vertical-offset="1334" max-vertical-offset="1995">
+            <state line="40" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="1.2526096" vertical-offset="0" max-vertical-offset="705">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -534,8 +534,8 @@
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/MainActivity.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java" />
+        <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" />
       </list>
     </option>
   </component>
@@ -1298,18 +1298,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java">
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.7494781" vertical-offset="301" max-vertical-offset="780">
+        <state line="67" column="0" selection-start="1720" selection-end="1720" vertical-scroll-proportion="-1.2854078" vertical-offset="1604" max-vertical-offset="2070">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/JoinView.java">
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-0.8669528" vertical-offset="1334" max-vertical-offset="1995">
+        <state line="40" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="1.2526096" vertical-offset="0" max-vertical-offset="705">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

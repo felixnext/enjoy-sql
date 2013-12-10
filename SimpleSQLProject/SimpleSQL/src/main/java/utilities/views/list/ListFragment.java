@@ -11,11 +11,7 @@ import ibr.androidlab.simplesql.xmlLoader.data.Table;
 import utilities.views.table.TableFragment;
 
 /**
-<<<<<<< HEAD
  * Fragment for the Display of table contents
-=======
- * Created by Felix on 09.12.13.
->>>>>>> parent of 9979616... updated todo list / updated sharedData singleton with story class
  */
 public class ListFragment extends Fragment {
     @Override
@@ -43,5 +39,4 @@ public class ListFragment extends Fragment {
                     + " must implement OnHeadlineSelectedListener");
         }
 
-    }
 }
