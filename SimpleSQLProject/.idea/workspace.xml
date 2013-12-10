@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9feb331d-182b-496b-bd1a-7b70aba04a27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SimpleSQLProject.iws" />
@@ -89,11 +88,20 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="3" selection-start="5961" selection-end="5961" vertical-scroll-proportion="4.433506" vertical-offset="357" max-vertical-offset="3026">
+            <state line="27" column="19" selection-start="866" selection-end="866" vertical-scroll-proportion="0.7927461" vertical-offset="0" max-vertical-offset="3026">
               <folding>
                 <element signature="e#454#472#0" expanded="true" />
                 <element signature="e#621#639#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -855,11 +863,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/XmlLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3536" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/Database/UserState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.09725401" vertical-offset="0" max-vertical-offset="1360" />
@@ -1119,13 +1122,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="35" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
@@ -1196,9 +1192,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/drawable-mdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="3" selection-start="5961" selection-end="5961" vertical-scroll-proportion="4.433506" vertical-offset="357" max-vertical-offset="3026">
+        <state line="27" column="19" selection-start="866" selection-end="866" vertical-scroll-proportion="0.7927461" vertical-offset="0" max-vertical-offset="3026">
           <folding>
             <element signature="e#454#472#0" expanded="true" />
             <element signature="e#621#639#0" expanded="true" />
