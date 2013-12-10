@@ -5,9 +5,9 @@ Task due to Friday 13th
     - SharedData Singleton
         - SharedData needs to be used in loading functions (e.g. StoryView)
     - Join View
-        - Implement List View Fragment
+        - update design (god damn it, the current design is ugly!)
         - Implement Drag and Drop functionality
-        - Create View for selection of attributes used in the join process
+        - Create View/Fragment for selection of attributes used in the join process
 
 
 According to our timetable
