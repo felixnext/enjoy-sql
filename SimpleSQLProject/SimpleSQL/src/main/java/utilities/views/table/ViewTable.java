@@ -9,7 +9,7 @@ public class ViewTable {
 
     private Table table;
     private String[][] content;
-    private TableCell[][] tableFormats; //TODO define setter
+    private TableCell[][] tableFormats;
     private String[] columns;
 
     /**
