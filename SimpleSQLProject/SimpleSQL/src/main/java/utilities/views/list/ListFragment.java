@@ -1,12 +1,5 @@
 package utilities.views.list;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import android.app.Activity;
-=======
->>>>>>> parent of 9979616... updated todo list / updated sharedData singleton with story class
-=======
->>>>>>> parent of 9979616... updated todo list / updated sharedData singleton with story class
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,11 +11,14 @@ import ibr.androidlab.simplesql.xmlLoader.data.Table;
 import utilities.views.table.TableFragment;
 
 /**
+<<<<<<< HEAD
  * Fragment for the Display of table contents
+=======
+ * Created by Felix on 09.12.13.
+>>>>>>> parent of 9979616... updated todo list / updated sharedData singleton with story class
  */
 public class ListFragment extends Fragment {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         return null;
     }
