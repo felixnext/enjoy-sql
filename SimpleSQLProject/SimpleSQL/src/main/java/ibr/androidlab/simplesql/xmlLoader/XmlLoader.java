@@ -208,6 +208,7 @@ public class XmlLoader {
     }
 
     private XmlLoader() {
+        stories = new ArrayList<StoryAbstract>();
         stories.add(new StoryAbstract("01","Example Story"));
     }
 
