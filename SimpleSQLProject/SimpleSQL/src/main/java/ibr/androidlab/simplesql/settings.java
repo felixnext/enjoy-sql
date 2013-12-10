@@ -1,4 +1,4 @@
-package ibr.androidlab.simplesql;
+ package ibr.androidlab.simplesql;
 
 import android.app.Activity;
 import android.content.Intent;
