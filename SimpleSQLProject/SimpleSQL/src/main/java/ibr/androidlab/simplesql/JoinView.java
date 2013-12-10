@@ -75,6 +75,10 @@ public class JoinView extends Activity {
         }
     }
 
+    private void startDragEvent() {
+    	//TODO start the drag event here
+    }
+
     /**
      * Add class to the join list
      * @param table the (unique) name of the table that should be added
@@ -139,7 +143,7 @@ public class JoinView extends Activity {
 
     private void addTables() {
     	//process: iterate through all tables in the 
-    	for (int i=0; i<story.tables.length; i++) {
+    	for (int i=0; i<SharedData.getInstance().currentStory.tables.length; i++) {
     		//process: add table to the 
     	}
     }
