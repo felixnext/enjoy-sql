@@ -11,7 +11,7 @@ import utilities.views.cond.ColumnsFragment;
  */
 public class ConditionsView extends Activity implements ColumnsFragment.SelectedColumnsDeliverer {
 
-    final public static String SELCTED_COLUMNS = "sected_columns";
+    final public static String SELECTED_COLUMNS = "sected_columns";
 
     private String[] selectedColumns;
 
@@ -24,7 +24,7 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
         //TODO send intent
         Intent intent = getIntent();
         if(intent != null) {
-            selectedColumns = intent.getStringArrayExtra(SELCTED_COLUMNS);
+            selectedColumns = intent.getStringArrayExtra(SELECTED_COLUMNS);
         }
 
 
