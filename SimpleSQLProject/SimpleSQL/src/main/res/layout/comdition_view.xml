@@ -69,10 +69,10 @@
             android:layout_height="match_parent"
             android:text="a" />
 
-        <TextView
+        <Spinner
+            android:id="@+id/between"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="BETWEEN"/>
+            android:layout_height="wrap_content" />
 
         <EditText
             android:layout_width="match_parent"

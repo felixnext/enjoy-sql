@@ -38,12 +38,70 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
             selectedColumns = intent.getStringArrayExtra(SELECTED_COLUMNS);
         }
 
+        //create all spinners
         createOperatorsSpinner();
+        createNullSpinner();
+        createLikeSpinner();
+        createBetweenSpinner();
+        createInSpinner();
 
-        
+
 
     }
 
+    private void createInSpinner() {
+        Spinner sp = (Spinner)findViewById(R.id.in);
+        String[] options = {"IN", "NOT IN"};
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+        sp.setSelection(0);
+        //TODO on click listener
+    }
+
+
+    /**
+     * Create the spinner with BETWEEN and NOT BETWEEN opportunities
+     */
+    private void createBetweenSpinner() {
+        Spinner sp = (Spinner)findViewById(R.id.between);
+        String[] options = {"BETWEEN", "NOT BETWEEN"};
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+        sp.setSelection(0);
+        //TODO on click listener
+    }
+
+    /**
+     * Create the spinner with LIKE and NOT LIKE opportunities
+     */
+    private void createLikeSpinner() {
+        Spinner sp = (Spinner)findViewById(R.id.like);
+        String[] options = {"LIKE", "NOT LIKE"};
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+        sp.setSelection(0);
+        //TODO on click listener
+    }
+
+    /**
+     * Create the spinner for NOT NULL and NULL options
+     */
+    private void createNullSpinner() {
+        Spinner sp = (Spinner)findViewById(R.id.n0ll);
+        String[] options = {"NULL", "NOT NULL"};
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+        sp.setSelection(0);
+        //TODO on click listener
+    }
+
+    /**
+     * Create the spinner with different operators e.g. =; >=, <=
+     */
     private void createOperatorsSpinner() {
         Spinner sp = (Spinner) findViewById(R.id.operator);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.operators, android.R.layout.simple_spinner_item);
@@ -51,7 +109,7 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
         sp.setAdapter(adapter);
         sp.setPrompt("Operator");
         sp.setSelection(0);
-
+        //TODO on item click listener
     }
 
     @Override
