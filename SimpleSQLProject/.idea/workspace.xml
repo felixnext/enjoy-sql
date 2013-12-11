@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9feb331d-182b-496b-bd1a-7b70aba04a27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/comdition_view.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/comdition_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionView.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/ConditionsView.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/ConditionsView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SimpleSQLProject.iws" />
@@ -112,7 +110,7 @@
       <file leaf-file-name="ColumnsFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1305">
+            <state line="69" column="27" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.0" vertical-offset="547" max-vertical-offset="1305">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,20 +118,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConditionView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionView.java">
+      <file leaf-file-name="ConditionsView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/ConditionsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="168" selection-end="168" vertical-scroll-proportion="0.18543956" vertical-offset="0" max-vertical-offset="728">
-              <folding />
+            <state line="26" column="9" selection-start="733" selection-end="733" vertical-scroll-proportion="0.53571427" vertical-offset="0" max-vertical-offset="728">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#795#796#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java">
+      <file leaf-file-name="StoryView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="16" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2280">
-              <folding />
+            <state line="52" column="53" selection-start="1773" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+              <folding>
+                <element signature="e#4169#4321#0" expanded="true" />
+                <element signature="e#4310#4311#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -517,6 +522,7 @@
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/comdition_view.xml" />
         <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionView.java" />
+        <option value="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/ConditionsView.java" />
       </list>
     </option>
   </component>
@@ -977,8 +983,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ibr.androidlab.simplesql" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SimpleSQL/src/main/res/menu" />
       <recent name="$PROJECT_DIR$/SimpleSQL/src/main/res/layout" />
@@ -1451,13 +1462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="58" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.0" vertical-offset="777" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/Story.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="76" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="585">
@@ -1496,13 +1500,6 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.25862068" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
@@ -1570,17 +1567,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1305">
+        <state line="69" column="27" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.0" vertical-offset="547" max-vertical-offset="1305">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/xmlLoader/ConditionView.java">
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/StoryView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="168" selection-end="168" vertical-scroll-proportion="0.18543956" vertical-offset="0" max-vertical-offset="728">
-          <folding />
+        <state line="52" column="53" selection-start="1773" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <folding>
+            <element signature="e#4169#4321#0" expanded="true" />
+            <element signature="e#4310#4311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/ConditionsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="9" selection-start="733" selection-end="733" vertical-scroll-proportion="0.53571427" vertical-offset="0" max-vertical-offset="728">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
