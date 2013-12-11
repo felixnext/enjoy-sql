@@ -16,7 +16,7 @@
         android:layout_below="@+id/listView"
         android:id="@+id/table_fragment"
         android:layout_width="fill_parent"
-        android:layout_height="fill_content"
+        android:layout_height="fill_parent"
         android:name="utilities.views.list.ListFragment"
         tools:layout="@layout/list_fragment" />
 </RelativeLayout>

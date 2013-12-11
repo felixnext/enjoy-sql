@@ -43,7 +43,7 @@ public class ListFragment extends Fragment {
             //TODO: start drag and drop events here
         }
     };
-
+    /*
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //process: bind the fragment layout to the code file
@@ -52,10 +52,11 @@ public class ListFragment extends Fragment {
         //process: bind the tables
         bindTables();
     }
-
+       */
     /**
 	 * Binds the given table array to the interface fragment
 	*/
+    /*
     public void bindTables() {
     	//TODO attach tables to this fragment
         //process: create the adapter using the shared data component for all tables
@@ -74,7 +75,7 @@ public class ListFragment extends Fragment {
         //process: add the click listener to the sideJoinList
         listView.setOnItemClickListener(mSideItemClickedHandler);
     }
-
+    */
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
