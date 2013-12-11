@@ -21,10 +21,13 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comdition_view);
 
+        //TODO send intent
         Intent intent = getIntent();
         if(intent != null) {
             selectedColumns = intent.getStringArrayExtra(SELCTED_COLUMNS);
         }
+
+
 
     }
 
