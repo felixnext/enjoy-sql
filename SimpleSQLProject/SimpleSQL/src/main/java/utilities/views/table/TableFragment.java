@@ -38,7 +38,6 @@ public class TableFragment extends Fragment {
     private ViewTable viewTable;
 
     public interface TableDeliverer {
-        //TODO right table class
         public Table deliverTable();
     }
 
