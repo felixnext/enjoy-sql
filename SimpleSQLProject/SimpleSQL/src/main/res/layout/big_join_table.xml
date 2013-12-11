@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_join_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="180dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="215dp"
+        android:background="#020202"
+        android:layout_height="fill_parent">
+
+
+        <ListView
+            android:layout_width="196dp"
+            android:layout_height="140dp"
+            android:id="@+id/listView"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+
+        <EditText
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:layout_row="11"
+            android:layout_column="0"
+            android:text="Foo Table"
+            android:textSize="25dp"
+            android:background="#020202"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal|bottom" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="65dp"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:layout_row="0"
+        android:layout_column="15">
+
+
+        <EditText
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:layout_row="0"
+            android:layout_column="14"
+            android:gravity="center"
+            android:text="|||"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:layout_gravity="left|center_vertical"
+            android:textSize="60dp" />
+    </LinearLayout>
+</LinearLayout>

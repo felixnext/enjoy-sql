@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="280dp"
+        android:layout_height="fill_parent">
+
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#0F0F0F"
+            android:id="@+id/joinMainList"
+            android:layout_gravity="left|center_vertical" >
+        </ListView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#202020">
+
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="495dp"
+            android:id="@+id/joinSideList"
+            android:layout_gravity="center|top">
+        </ListView>
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#464646"
+            android:text="+"
+            android:textColor="#cacaca"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:focusableInTouchMode="false"
+            android:gravity="center" />
+    </FrameLayout>
+</LinearLayout>
+

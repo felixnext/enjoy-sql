@@ -12,8 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9feb331d-182b-496b-bd1a-7b70aba04a27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/table/TableFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/big_join_table.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/list_fragment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/small_join_table.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/list_fragement.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/Database/SharedData.java" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/java/ibr/androidlab/simplesql/Database/SharedData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" afterPath="$PROJECT_DIR$/SimpleSQL/src/main/res/layout/table_join_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../todo.txt" afterPath="$PROJECT_DIR$/../todo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SimpleSQLProject.iws" />
@@ -110,7 +116,7 @@
       <file leaf-file-name="ColumnsFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="33" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.73214287" vertical-offset="607" max-vertical-offset="1335">
+            <state line="63" column="21" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.4642857" vertical-offset="607" max-vertical-offset="1335">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2129#2130#0" expanded="true" />
@@ -1400,16 +1406,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/res/layout/list_fragement.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="584" selection-end="584" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1770">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/list/ListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="12" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
@@ -1534,7 +1530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleSQL/src/main/java/utilities/views/cond/ColumnsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="33" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.73214287" vertical-offset="607" max-vertical-offset="1335">
+        <state line="63" column="21" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.4642857" vertical-offset="607" max-vertical-offset="1335">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2129#2130#0" expanded="true" />
