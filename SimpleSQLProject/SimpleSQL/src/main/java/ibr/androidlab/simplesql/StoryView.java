@@ -106,7 +106,7 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
                 String[] columns = viewTable.getSelectedColumns();
 
                 Intent intent = new Intent(getApplicationContext(), ConditionsView.class);
-                intent.putExtra(ConditionsView.SELECTED_COLUMNS,columns);
+                intent.putExtra(ConditionsView.SELECTED_COLUMNS, columns);
                 startActivity(intent);
 
 

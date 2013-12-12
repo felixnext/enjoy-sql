@@ -3,6 +3,7 @@ package utilities.views.cond;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,7 @@ public class ColumnsFragment extends Fragment implements AdapterView.OnItemSelec
         String[] columns = deliverer.getSectedColumns();
 
         if (columns == null) {
-            //TODO what happens?
+            Log.v("MASSAGE", "Selected columns = NULL");
         }
 
         Spinner sp = (Spinner) view.findViewById(R.id.column_name);

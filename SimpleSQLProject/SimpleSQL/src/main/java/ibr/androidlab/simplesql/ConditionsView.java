@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -30,14 +31,19 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.comdition_view);
+
 
         //TODO send intent
         Intent intent = getIntent();
         if(intent != null) {
             selectedColumns = intent.getStringArrayExtra(SELECTED_COLUMNS);
+            Log.v("ConditionView", "Columns delivered");
+        } else {
+            Log.v("ConditionView", "intent == NULL");
         }
 
+        setContentView(R.layout.condition_view);
+        
         //create all spinners
         createOperatorsSpinner();
         createNullSpinner();
