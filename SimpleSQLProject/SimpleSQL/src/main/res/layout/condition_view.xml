@@ -1,247 +1,375 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:stretchColumns="1">
 
-        <fragment xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/columns_spinner1"
+    <TableRow>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:name="utilities.views.cond.ColumnsFragment"
-            tools:layout="@layout/columns_fragment" />
-
-        <Spinner
-            android:id="@+id/operator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="a" />
-
-        <LinearLayout
-            android:layout_width="65dp"
-            android:layout_height="fill_parent"
+            android:padding="20dp"
             android:background="#000000">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/operatorsList"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext">
+
+                <fragment xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/columns_spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:name="utilities.views.cond.ColumnsFragment"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    tools:layout="@layout/columns_fragment" />
+
+                <Spinner
+                    android:id="@+id/operator"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="#fff"
+                    android:minWidth="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:singleLine="true"
+                    android:text="a" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drag_field1"
+                    android:gravity="right"
+                    android:text="|||"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:background="#000000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext">
+
+                <fragment xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/columns_spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:name="utilities.views.cond.ColumnsFragment"
+                    android:layout_gravity="center"
+                    tools:layout="@layout/columns_fragment" />
+
+
+                <Spinner
+                    android:id="@+id/between"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="#fff"
+                    android:minWidth="50dp"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:text="a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:textColor="#ffffff"
+                    android:text="AND" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:minWidth="50dp"
+                    android:singleLine="true"
+                    android:text="a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:id="@+id/drag_field2"
+                    android:gravity="right"
+                    android:text="|||"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext">
+
+                <fragment xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/columns_spinner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:name="utilities.views.cond.ColumnsFragment"
+                    tools:layout="@layout/columns_fragment" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:text="IS" />
+
+                <Spinner
+                    android:id="@+id/n0ll"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drag_field3"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:text="|||"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext">
+
+                <fragment xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/columns_spinner4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:name="utilities.views.cond.ColumnsFragment"
+                    tools:layout="@layout/columns_fragment" />
+
+                <Spinner
+                    android:id="@+id/like"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:minWidth="50dp"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:text="a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drag_field4"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:text="|||"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext">
+
+                <fragment xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/columns_spinner5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:name="utilities.views.cond.ColumnsFragment"
+                    tools:layout="@layout/columns_fragment" />
+
+                <Spinner
+                    android:id="@+id/in"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:gravity="center"
+                    android:text="( ' ' )" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#464646"
+                    android:text=" - "
+                    android:textColor="#cacaca"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:gravity="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:minWidth="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:text="a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#464646"
+                    android:text=" + "
+                    android:textColor="#cacaca"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drag_field5"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:text="|||"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginLeft="@dimen/condition_margin"
+                    android:layout_marginRight="@dimen/condition_margin"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:background="#202020">
+
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/conditionSideList"
+                android:layout_gravity="center|top"></ListView>
 
 
             <EditText
-                android:layout_width="66dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/drag_field1"
-                android:gravity="center"
-                android:text="|||"
-                android:textColor="#ffffff"
-                android:background="#000000"
-                android:layout_gravity="left|center_vertical"
-                android:textSize="60sp" />
-        </LinearLayout>
+                android:id="@+id/editText"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="#464646"
+                android:text="+"
+                android:textColor="#cacaca"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:focusableInTouchMode="false"
+                android:gravity="center" />
+        </FrameLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <fragment xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/columns_spinner2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:name="utilities.views.cond.ColumnsFragment"
-            tools:layout="@layout/columns_fragment" />
-
-
-        <Spinner
-            android:id="@+id/between"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="AND"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
-
-        <LinearLayout
-            android:layout_width="65dp"
-            android:layout_height="fill_parent"
-            android:background="#000000">
-
-
-            <EditText
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/drag_field2"
-                android:gravity="center"
-                android:text="|||"
-                android:textColor="#ffffff"
-                android:background="#000000"
-                android:layout_gravity="left|center_vertical"
-                android:textSize="60sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <fragment xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/columns_spinner3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:name="utilities.views.cond.ColumnsFragment"
-            tools:layout="@layout/columns_fragment" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="IS"/>
-
-        <Spinner
-            android:id="@+id/n0ll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <LinearLayout
-            android:layout_width="65dp"
-            android:layout_height="fill_parent"
-            android:background="#000000">
-
-
-            <EditText
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/drag_field3"
-                android:gravity="center"
-                android:text="|||"
-                android:textColor="#ffffff"
-                android:background="#000000"
-                android:layout_gravity="left|center_vertical"
-                android:textSize="60sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <fragment xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/columns_spinner4"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:name="utilities.views.cond.ColumnsFragment"
-            tools:layout="@layout/columns_fragment" />
-
-        <Spinner
-            android:id="@+id/like"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
-
-        <LinearLayout
-            android:layout_width="65dp"
-            android:layout_height="fill_parent"
-            android:background="#000000">
-
-
-            <EditText
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/drag_field4"
-                android:gravity="center"
-                android:text="|||"
-                android:textColor="#ffffff"
-                android:background="#000000"
-                android:layout_gravity="left|center_vertical"
-                android:textSize="60sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <fragment xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/columns_spinner5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:name="utilities.views.cond.ColumnsFragment"
-            tools:layout="@layout/columns_fragment" />
-
-        <Spinner
-            android:id="@+id/in"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="()"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="#464646"
-            android:text="+"
-            android:textColor="#cacaca"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:focusableInTouchMode="false"
-            android:gravity="center" />
-
-        <LinearLayout
-            android:layout_width="65dp"
-            android:layout_height="fill_parent"
-            android:background="#000000">
-
-
-            <EditText
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/drag_field5"
-                android:gravity="center"
-                android:text="|||"
-                android:textColor="#ffffff"
-                android:background="#000000"
-                android:layout_gravity="left|center_vertical"
-                android:textSize="60sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+    </TableRow>
+</TableLayout>

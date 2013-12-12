@@ -43,7 +43,7 @@ public class ColumnsFragment extends Fragment implements AdapterView.OnItemSelec
 
         Spinner sp = (Spinner) view.findViewById(R.id.column_name);
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item, columns);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.dropdown_item);
         sp.setAdapter(adapter);
         sp.setPrompt("Attribute");
         if (columns.length > 0) {
