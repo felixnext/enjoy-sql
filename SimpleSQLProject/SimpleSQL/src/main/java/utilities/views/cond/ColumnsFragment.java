@@ -36,7 +36,7 @@ public class ColumnsFragment extends Fragment implements AdapterView.OnItemSelec
 
         String[] columns = deliverer.getSectedColumns();
 
-        if(columns == null) {
+        if (columns == null) {
             //TODO what happens?
         }
 
@@ -45,7 +45,7 @@ public class ColumnsFragment extends Fragment implements AdapterView.OnItemSelec
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
         sp.setPrompt("Attribute");
-        if(columns.length>0) {
+        if (columns.length > 0) {
             sp.setSelection(0);
         }
         sp.setOnItemSelectedListener(this);
@@ -74,8 +74,9 @@ public class ColumnsFragment extends Fragment implements AdapterView.OnItemSelec
     @Override
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
-       item =  parent.getItemAtPosition(pos).toString();
+        item = parent.getItemAtPosition(pos).toString();
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         // Another interface callback
