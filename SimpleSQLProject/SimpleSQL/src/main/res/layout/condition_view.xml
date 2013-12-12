@@ -59,15 +59,6 @@
             android:name="utilities.views.cond.ColumnsFragment"
             tools:layout="@layout/columns_fragment" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="BETWEEN"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
 
         <Spinner
             android:id="@+id/between"

@@ -32,8 +32,6 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        //TODO send intent
         Intent intent = getIntent();
         if(intent != null) {
             selectedColumns = intent.getStringArrayExtra(SELECTED_COLUMNS);
@@ -43,7 +41,7 @@ public class ConditionsView extends Activity implements ColumnsFragment.Selected
         }
 
         setContentView(R.layout.condition_view);
-        
+
         //create all spinners
         createOperatorsSpinner();
         createNullSpinner();

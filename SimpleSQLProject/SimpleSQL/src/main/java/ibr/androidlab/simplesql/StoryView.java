@@ -93,7 +93,8 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
             @Override
             public void onClick(View v) {
                 //TODO start join view
-
+                Intent intent = new Intent(getApplicationContext(), JoinView.class);
+                startActivity(intent);
             }
         });
 

@@ -150,6 +150,9 @@ public class TableFragment extends Fragment {
 
 }
 
+/**
+ * Listener for clicking on columns head.
+ */
 class HeadClickListener implements View.OnClickListener {
 
     private ViewTable viewTable;
