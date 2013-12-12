@@ -3,6 +3,7 @@ package ibr.androidlab.simplesql;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ import ibr.androidlab.simplesql.xmlLoader.data.Table;
 import ibr.androidlab.simplesql.xmlLoader.storytelling.Image;
 import utilities.views.MultiWordAutoCompleteView;
 import utilities.views.table.TableFragment;
+import utilities.views.table.ViewTable;
 
 
 public class StoryView extends Activity implements TableFragment.TableDeliverer {
@@ -99,6 +101,15 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
         conditionView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
+                ViewTable viewTable = table.getViewTable();
+                String[] columns = viewTable.getSelectedColumns();
+
+                Intent intent = new Intent(getApplicationContext(), ConditionsView.class);
+                intent.putExtra(ConditionsView.SELECTED_COLUMNS,columns);
+                startActivity(intent);
+
+
                 //TODO start condition view
             }
         });
@@ -129,7 +140,6 @@ public class StoryView extends Activity implements TableFragment.TableDeliverer 
     @Override
     public Table deliverTable() {
         Table table = null;
-        //TableFragment table  = (TableFragment) getFragmentManager().findFragmentById(R.id.table_fragment);
         XmlLoader loader = XmlLoader.getInstance();
         ArrayList<StoryAbstract> stories = loader.getAvailableStories();
 

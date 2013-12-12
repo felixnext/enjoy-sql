@@ -35,11 +35,18 @@ public class TableFragment extends Fragment {
     private int width = 0;
 
     private TableDeliverer deliverer;
+
+    public ViewTable getViewTable() {
+        return viewTable;
+    }
+
     private ViewTable viewTable;
 
     public interface TableDeliverer {
         public Table deliverTable();
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

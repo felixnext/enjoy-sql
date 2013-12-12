@@ -1,5 +1,7 @@
 package utilities.views.table;
 
+import java.util.HashSet;
+
 import ibr.androidlab.simplesql.xmlLoader.data.Table;
 
 /**
@@ -11,6 +13,7 @@ public class ViewTable {
     private String[][] content;
     private TableCell[][] tableFormats;
     private String[] columns;
+    private HashSet<String> selectedColumns;
 
     /**
      *
@@ -21,6 +24,7 @@ public class ViewTable {
         content = table.getTableContent();
         columns = table.getColumns();
         tableFormats = new TableCell[content.length][content[0].length];
+        selectedColumns = new HashSet<String>();
     }
 
 
@@ -32,9 +36,30 @@ public class ViewTable {
         for(int i = 0; i < columns.length; i++){
             if(columns[i].equals(columnName)){
                 selectCollum(i);
+
+                if(!selectedColumns.contains(columns[i])) {
+                    selectedColumns.add(columns[i]);
+                } else {
+                    selectedColumns.remove(columns[i]);
+                }
+
                 break;
             }
         }
+    }
+
+    /**
+     * Return all selected columns on this table.
+     * @return all selected columns on this table
+     */
+    public String[] getSelectedColumns() {
+        String[] columns = new String[selectedColumns.size()];
+        int i = 0;
+        for(String column : selectedColumns) {
+            columns[i] = column;
+            i++;
+        }
+        return columns;
     }
 
     /**
