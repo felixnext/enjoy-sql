@@ -3,7 +3,7 @@ package utilities.views.table;
 import ibr.androidlab.simplesql.xmlLoader.data.Table;
 
 /**
- * Created by yevgen on 08.12.13.
+ * Created on 08.12.13.
  */
 public class ViewTable {
 

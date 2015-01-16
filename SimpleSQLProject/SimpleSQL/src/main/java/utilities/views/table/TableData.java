@@ -1,7 +1,7 @@
 package utilities.views.table;
 
 /**
- * Created by Yevgen Pikus on 23/11/13.
+ * Created on 23/11/13.
  * This class represent container for the data from table. Class assumes responsibility for loading the data from DB.
  */
 public class TableData {

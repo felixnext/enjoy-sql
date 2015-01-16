@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.widget.TextView;
 
 /**
- * Created by Yevgen Pikus on 24/11/13.
+ * Created on 24/11/13.
  */
 public class TableCell extends TextView {
 

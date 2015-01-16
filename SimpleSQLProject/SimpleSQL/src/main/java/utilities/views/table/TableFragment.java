@@ -27,7 +27,7 @@ import ibr.androidlab.simplesql.R;
 import ibr.androidlab.simplesql.xmlLoader.data.Table;
 
 /**
- * Created by Yevgen Pikus on 23/11/13.
+ * Created on 23/11/13.
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class TableFragment extends Fragment {

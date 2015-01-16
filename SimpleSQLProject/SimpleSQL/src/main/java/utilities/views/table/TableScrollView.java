@@ -1,7 +1,7 @@
 package utilities.views.table;
 
 /**
- * Created by Yevgen Pikus on 24/11/13.
+ * Created  on 24/11/13.
  */
 
 import android.content.Context;
